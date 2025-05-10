@@ -1,6 +1,7 @@
-
+// ignore: deprecated_member_use
 import 'package:flutter/material.dart';
 
+// ignore: use_key_in_widget_constructors
 class OrdersPage extends StatelessWidget {
   final List<Map<String, String>> orders = [
     {
@@ -22,6 +23,8 @@ class OrdersPage extends StatelessWidget {
       'status': 'قيد الإعداد',
     },
   ];
+
+  // OrdersPage({super.key});
 
   Color getStatusColor(String status) {
     switch (status) {
@@ -71,6 +74,8 @@ class OrdersPage extends StatelessWidget {
                 contentPadding: EdgeInsets.all(16),
                 leading: CircleAvatar(
                   radius: 25,
+
+                  // ignore: deprecated_member_use
                   backgroundColor: statusColor.withOpacity(0.2),
                   child: Icon(statusIcon, color: statusColor),
                 ),
